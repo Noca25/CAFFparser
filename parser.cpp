@@ -9,7 +9,6 @@
 
 std::vector<unsigned char> globalResultPixels;
 
-
 namespace fileparser {
 
     struct CiffHeader {
@@ -55,7 +54,6 @@ namespace fileparser {
     };
 
 
-
     class CiffParser {
         public:
         int parse(const std::string& pathToRead, const std::string& fileName) {
@@ -97,7 +95,6 @@ namespace fileparser {
                     stop = true;
                 }
             }
-
 
             auto used_size =  
                 sizeof(header.magic) +
@@ -150,9 +147,7 @@ namespace fileparser {
 
             std::cout << "CIFF file processed successfully" << std::endl;
 
-
-//   bool writeJpeg(WRITE_ONE_BYTE output, const void* pixels, unsigned short width, unsigned short height,
-//                  bool isRGB = true, unsigned char quality = 90, bool downsample = false, const char* comment = nullptr);
+            //Converting to JPEG
 
             std::vector<unsigned char> jpegResult;
 
@@ -175,9 +170,6 @@ namespace fileparser {
             return 0;
         }
 
-       // WRITE_ONE_BYTE handler() {
-
-       // }
     };
 
     class CaffParser {
