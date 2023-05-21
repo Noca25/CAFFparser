@@ -149,8 +149,6 @@ namespace fileparser {
 
             //Converting to JPEG
 
-            std::vector<unsigned char> jpegResult;
-
             auto myOutput = [](unsigned char oneByte) { 
                 globalResultPixels.push_back(oneByte); 
             };
